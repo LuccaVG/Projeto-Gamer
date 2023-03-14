@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="header-top">
             <div class="layout-grid">
@@ -42,18 +43,18 @@
         <div class="header-bottom">
             <div class="layout-grid alinhamento-between-center">
                 <!-- Menu Hamburger. Visível apenas no smartphone -->
-                <img src="assets/icons/bars.svg" alt="Ícone de Telefone. Abre e fecha o menu principal, no celular">
+                <img onclick="mostrarMenu()" src="assets/icons/bars.svg" alt="Ícone de Telefone. Abre e fecha o menu principal, no celular">
 
                 <img class="logo" src="assets/images/logotipo-gamer.svg"
                     alt="Imagem logotipo gamer com um controle de vídeo game ao centro">
 
-                <nav class="menu">
+                <nav class="menu" id="menu">
                     <a href="">Início</a>
                     <a href="">Jogadores</a>
                     <a href="">Equipes</a>
                     <a href="">Notícias</a>
 
-                    <!-- vísível apenas no mobile -->   
+                    <!-- vísível apenas no mobile -->
                     <a class="phone">
                         <img src="assets/icons/icone_telefone.svg" alt="Ícone do telefone de contato">
                         <p>(11) 0900-1010</p>
@@ -80,7 +81,7 @@
                 <!-- menu 3 pontinhos -->
                 <img src="assets/icons/pointers.svg" alt="Ícone 3 pontinhos, abre e fecha o menu de usuários">
 
-                <div class="menu-usuarios">
+                <div class="menu-usuarios" >
                     <a href="">
                         <img src="assets/icons/user.svg" alt="Ícone de perfil">
                     </a>
@@ -94,6 +95,14 @@
             </div>
         </div>
     </header>
+
+<script>
+     function mostrarMenu() {
+            // pega a navbar pelo id
+            document.getElementById("menu").classList.toggle("mostrar-menu");
+        }
+</script>
+
 </body>
 
 </html>
